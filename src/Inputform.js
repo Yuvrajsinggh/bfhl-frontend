@@ -5,7 +5,7 @@ const InputForm = ({ setResponse }) => {
   const [jsonInput, setJsonInput] = useState(""); // Holds user input
   const [error, setError] = useState(""); // Holds error messages
 
-  const backendUrl = "https://bfhl-backend-32po39gdy-yuvrajsingghs-projects.vercel.app/bfhl"
+  const backendUrl = "https://bfhl-backend-a3nl.onrender.com/bfhl"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
