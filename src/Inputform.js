@@ -5,6 +5,8 @@ const InputForm = ({ setResponse }) => {
   const [jsonInput, setJsonInput] = useState(""); // Holds user input
   const [error, setError] = useState(""); // Holds error messages
 
+  const backendUrl = "https://bfhl-backend-32po39gdy-yuvrajsingghs-projects.vercel.app/bfhl"
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -19,7 +21,7 @@ const InputForm = ({ setResponse }) => {
       setError(""); // Clear errors if input is valid
 
       // Send data to backend
-      const response = await axios.post("http://localhost:3001/bfhl", parsedInput);
+      const response = await axios.post(backendUrl, parsedInput);
       setResponse(response.data); // Pass response to parent
     } catch (err) {
       setError("Invalid JSON format. Please check your input."); // Generic error
